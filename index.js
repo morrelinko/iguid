@@ -1,7 +1,7 @@
 var _guid = 0;
 
 module.exports = {
-  create() {
+  create: function () {
     return ++_guid;
   }
 };
