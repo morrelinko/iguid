@@ -1,10 +1,16 @@
 {
   "name": "iguid",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Incremental Global Unique IDentifier",
   "main": "index.js",
   "scripts": {},
-  "keywords": [],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morrelinko/iguid.git"
+  },
+  "keywords": [
+  	"guid"
+  ],
   "author": "Laju Morrison <morrelinko@gmail.com>",
   "license": "MIT",
   "dependencies": {}
