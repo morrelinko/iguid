@@ -4,8 +4,6 @@ const { assert } = require('chai')
 const iguid = require('../')
 const time = Date.now()
 
-console.log(time, iguid.prefix)
-
 describe('iguid', function () {
   it('generates unique id', function () {
     const uid = iguid()
