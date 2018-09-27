@@ -1,15 +1,24 @@
 'use strict'
 
-function iguid () {
-  return `${iguid.prefix}${iguid.state++}`
+/**
+ * @param prefix
+ * @return {function}
+ */
+function newUp (prefix) {
+  const uid = function uid () {
+    const prefix = uid.prefix
+    return `${prefix
+      ? (typeof prefix === 'function'
+        ? prefix()
+        : prefix)
+      : ''}${uid.state++}`
+  }
+
+  uid.state = 0
+  uid.prefix = prefix
+
+  return uid
 }
 
-iguid.state = 0
-iguid.prefix = Date.now()
-
-/**
- * Compatibility with v1.x 
- */
-iguid.create = () => iguid()
-
-module.exports = iguid
+module.exports = newUp(Date.now())
+module.exports.newUp = newUp
