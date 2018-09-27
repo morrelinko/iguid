@@ -29,6 +29,30 @@ console.log(
 // ]
 ```
 
+### Customized Instance
+
+By default iguid uses the the timestamp when the process was started as prefix. This is used to achieve some level of uniqueness when called from multiple node instances. 
+
+However you can spin-off a new instance of the generator passing a custom prefix.
+
+```js
+const uid = require('iguid').newUp('c')
+
+console.log(uid()) // c0
+console.log(uid()) // c1
+console.log(uid()) // c2
+console.log(uid()) // c3
+```
+
+Pass a falsey value to remove prefix altogether
+
+```js
+const uid = require('iguid').newUp(null)
+
+console.log(uid()) // 0
+console.log(uid()) // 1
+```  
+
 ### NOTE: 
 
 If you are using v1 api syntax of this library, 
