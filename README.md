@@ -55,10 +55,7 @@ console.log(uid()) // 1
 
 ### NOTE: 
 
-If you are using v1 api syntax of this library, 
-you don;t need to change anything in code.
-
-The only difference is the ID generated is now prefixed...
+Nothing really!
 
 That's all folks :)
 
