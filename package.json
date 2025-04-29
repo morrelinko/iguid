@@ -1,8 +1,13 @@
 {
   "name": "iguid",
-  "version": "3.0.0",
+  "version": "4.0.0-pre",
   "description": "Incremental Global Unique IDentifier",
-  "main": "index.js",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    "import": "./index.js",
+    "types": "./index.d.ts"
+  },
   "scripts": {
     "test": "mocha"
   },

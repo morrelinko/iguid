@@ -1,10 +1,8 @@
-'use strict'
-
 /**
  * @param prefix
- * @return {function}
+ * @return {import('./index.d.ts').IGuid}
  */
-function newUp (prefix) {
+export function createIGuid (prefix) {
   const uid = function uid () {
     const prefix = uid.prefix
     return `${prefix
@@ -20,5 +18,4 @@ function newUp (prefix) {
   return uid
 }
 
-module.exports = newUp(Date.now())
-module.exports.newUp = newUp
+export const iguid = createIGuid(Date.now())

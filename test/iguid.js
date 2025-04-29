@@ -1,11 +1,12 @@
 'use strict'
 
-const { assert } = require('chai')
-const iguid = require('../')
+import { assert } from 'chai'
+import { iguid, createIGuid } from '../index.js'
+
 const time = Date.now()
 
 describe('iguid', function () {
-  it('generates unique id', function () {
+  it('generates unique incremental id', function () {
     const uid = iguid()
     const uid1 = iguid()
     const uid2 = iguid()
@@ -16,9 +17,9 @@ describe('iguid', function () {
     assert.strictEqual(uid2, time + '2')
   })
 
-  it('spins up a new iguid generator', function () {
-    const uid = iguid.newUp(null)
-    const uidp = iguid.newUp('p')
+  it('creates a new iguid generator with prefix configured', function () {
+    const uid = createIGuid(null)
+    const uidp = createIGuid('p')
 
     assert.isOk(uid)
     assert.isFunction(uid)
