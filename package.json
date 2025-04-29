@@ -1,6 +1,6 @@
 {
   "name": "iguid",
-  "version": "4.0.0-pre",
+  "version": "4.0.0-alpha.1",
   "description": "Incremental Global Unique IDentifier",
   "type": "module",
   "main": "./index.js",
